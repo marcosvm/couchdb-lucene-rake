@@ -1,12 +1,12 @@
 # Couchdb-lucene-rake
 
-A tasks to push couchdb-lucene indexes via rake.
+A task to push couchdb-lucene indexes via rake.
 
 This tool has the goal of keeping couchdb-lucene scripts easily maintainable by using a directory layout convention and javascript with .js extension to make it suitable to edit inside your favorite text editor or IDE.
 
 Those take could be easily written using the [CouchRest](http://github.com/jchris/couchrest) RESTful client for CouchDB and were inspired by the [CouchRestRails plugin](http://github.com/hpoydar/couchrest-rails)
 
-The task are:
+The task is:
 
 * push - push the indexes views from your file system to couchdb.
 
@@ -18,7 +18,7 @@ The task are:
 ### Usage
     rake -f tasks/couchdb_lucene_rake.rake couchdb:lucene:push[<database-url>,<design-document>]
 
-Will push the lucene views to the database-rul on the design-document.
+Will push the lucene views to the database-url on the design-document.
     
 ### Example
 
