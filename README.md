@@ -6,9 +6,10 @@ This tool has the goal of keeping couchdb-lucene scripts easily maintainable by 
 
 Those take could be easily written using the [CouchRest](http://github.com/jchris/couchrest) RESTful client for CouchDB and were inspired by the [CouchRestRails plugin](http://github.com/hpoydar/couchrest-rails)
 
-The task is:
+The tasks are:
 
 * push - push the indexes views from your file system to couchdb.
+* pull - pull the indexes view from couchdb to your file system
 
 ## Dependencies
 
@@ -18,7 +19,11 @@ The task is:
 ### Usage
     rake -f tasks/couchdb_lucene_rake.rake couchdb:lucene:push[<database-url>,<design-document>]
 
-Will push the lucene views to the database-url on the design-document.
+Will push the lucene views from disk to the database-url on the design-document.
+
+    rake -f tasks/couchdb_lucene_rake.rake couchdb:lucene:pull[<database-url>,<design-document>]
+
+Will pull the lucene views from the database-url on the design-document and save them on disk.
     
 ### Example
 
@@ -51,6 +56,6 @@ will produce a design document like:
     }
 
 ### TODO
-* Create "pull" task.
 * Create .couchdb-lucene-rake with database and design-documents configuration.
+* Write tests
 

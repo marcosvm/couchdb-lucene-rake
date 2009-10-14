@@ -7,8 +7,10 @@ namespace :couchdb do
     task :push, :database, :design_doc do |t, args|
       CouchDBLuceneRake::Tasks.push(args.database,args.design_doc)
     end
+  
+    desc "Pull lucene indexes views from couchdb"
+    task :pull, :database, :design_doc do |t, args|
+      CouchDBLuceneRake::Tasks.pull(args.database,args.design_doc)
+    end
   end
 end
-  
-  # desc "Pull lucene indexes views from couchdb"
-# end
